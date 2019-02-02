@@ -1,0 +1,20 @@
+function xx(integer n)
+    for p=2 to n do
+        if p*p>n then exit end if
+        if mod(n,p)=0 then return false end if
+    end for
+    return n>=2
+end function
+ 
+function ss(integer w, h, x, y)
+    return iff(y?w+ss(h-1,w,y-1,w-x-1):x)
+end function
+ 
+integer w = 9, h = 9
+for i=h-1 to 0 by -1 do
+    for j=w-1 to 0 by -1 do
+        integer p = w*h-ss(w,h,j,i)
+        puts(1,"o "[2-xx(p)])
+    end for
+    puts(1,'\n')
+end for
