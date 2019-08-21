@@ -21,6 +21,9 @@ PLAN NOTES FOR NEW ESOTERIC LANGUAGE
 - UTF-8 ID (A/N) will be the ID per char
   >> "$" will have ID 0024
   >> "µ" will have ID 00B5
+  >> IDs will be recursive in its forms
+     > ID 00B5 will encrypt until 'B' is
+       in 0-9 format
 - encryption will require "seed" to compile
   >> different seeds output other programs
   >> input 4 with seed 8 will output 
