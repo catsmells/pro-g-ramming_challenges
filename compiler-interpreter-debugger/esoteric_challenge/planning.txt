@@ -16,7 +16,7 @@ PLAN NOTES FOR NEW ESOTERIC LANGUAGE
 - language will rely on encryption
 - encryption of source is compilation
 
-<> ENCRYPTION METHOD <>
+<> ENCRYPTION BASIS <>
 -------------------------------------------
 - UTF-8 ID (A/N) will be the ID per char
   >> "$" will have ID 0024
@@ -29,5 +29,5 @@ PLAN NOTES FOR NEW ESOTERIC LANGUAGE
   >> input 4 with seed 8 will output 
      something other than i4s7
   >> infinite amount of programs possible
-  >> duplicate programs are psosible with
+  >> duplicate programs are possible with
      unique seed/source combinations
