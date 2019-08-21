@@ -31,3 +31,11 @@ PLAN NOTES FOR NEW ESOTERIC LANGUAGE
   >> infinite amount of programs possible
   >> duplicate programs are possible with
      unique seed/source combinations
+
+<> POSSIBLE ENCRYPTION FORMULA <>
+-------------------------------------------
+n=pq,θ(pq)=(p−1)(q−1)
+de≡1(modθ(n))
+d=1/2[se]
+
+AKA, something RSA-like.
