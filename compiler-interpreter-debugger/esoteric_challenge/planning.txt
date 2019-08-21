@@ -1,0 +1,30 @@
+PLAN NOTES FOR NEW ESOTERIC LANGUAGE
+===========================================
+
+<> CHALLENGE REQUIREMENTS <>
+-------------------------------------------
+0. Must be original
+1. Must work on an electronic computer
+2. Must be a working language
+3. Must have examples of practicality
+
+<> NOTES <>
+-------------------------------------------
+- language will be named "PortaLang"
+  >> portmanteau of "portal" & "lang"
+- language will be functional
+- language will rely on encryption
+- encryption of source is compilation
+
+<> ENCRYPTION METHOD <>
+-------------------------------------------
+- UTF-8 ID (A/N) will be the ID per char
+  >> "$" will have ID 0024
+  >> "µ" will have ID 00B5
+- encryption will require "seed" to compile
+  >> different seeds output other programs
+  >> input 4 with seed 8 will output 
+     something other than i4s7
+  >> infinite amount of programs possible
+  >> duplicate programs are psosible with
+     unique seed/source combinations
