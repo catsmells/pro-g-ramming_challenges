@@ -1,0 +1,14 @@
+About Header Files
+=====================================================================
+
+Portalang has header files with the extension ".xh".
+
+Header files are the bases of the language. Essentially, like ammo
+to a gun. 
+
+Portalang cannot function without the inclusion of at least one
+header file.
+
+In Portalang, there are currently 1 header files:
+
+main.xh
