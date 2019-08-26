@@ -6,6 +6,8 @@ main(){
     print("Hello, World!\n");
 }
 
+Reminder: you can do all your code on one line!
+
 Commenting:
 ===================================================================================
 //single line comment
