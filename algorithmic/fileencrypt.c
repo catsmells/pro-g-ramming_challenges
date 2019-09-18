@@ -9,9 +9,9 @@ int main(int argc, char *argv[]){
     char buffer[BUFSIZ];
     char *find
     if((fp=fopen(argv[1],"w+"))==NULL){
-        perror("Error");
+        perror("Error\n");
         getchar();
-        return 1;
+        return(1);
     }
     fputs("Please enter text. ",stdout);
     fputs("Press {Return} twice to complete. ",stdout);
@@ -37,7 +37,7 @@ int main(int argc, char *argv[]){
        perror("Error");
     puts("File closed!");
     getchar();
-    return 0;
+    return(0);
 }  
 void encrypt(FILE *file){
     rewind(file);
