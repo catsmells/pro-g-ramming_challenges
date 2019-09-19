@@ -7,11 +7,11 @@ void normalize(double*v){
 	double len=sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
 	v[0]/=len;v[1]/=len;v[2]/=len;
 } 
-double dot(double *x, double *y){
+double dot(double *x,double *y){
 	double d = x[0]*y[0] + x[1]*y[1] + x[2]*y[2];
 	return d < 0 ? -d : 0;
 }
-typedef struct{ double cx,cy,cz,r;} sphere_t;
+typedef struct{double cx,cy,cz,r;} sphere_t;
 sphere_t pos={20,20,0,20},neg={1,1,-6,20};
 int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 	double zsq;
@@ -27,7 +27,7 @@ int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 void draw_sphere(double k,double ambient){
 	int i,j,intensity,hit_result;
 	double b;
-	double vec[3], x, y, zb1, zb2, zs1, zs2;
+	double vec[3],x,y,zb1,zb2,zs1,zs2;
 	for(i=floor(pos.cy-pos.r);i<=ceil(pos.cy+pos.r);i++){
 		y=i+.5;
 		for(j=floor(pos.cx-2*pos.r);j<=ceil(pos.cx+2*pos.r);j++){
@@ -39,7 +39,7 @@ void draw_sphere(double k,double ambient){
 			else if(zs1>zb1)hit_result=1;
 			else if(zs2>zb2)hit_result=0;
 			else if (zs2 > zb1) hit_result=2;
-			else		    hit_result=1;
+			else hit_result=1;
 			switch(hit_result){
 			case 0:
 				putchar('+');
@@ -66,15 +66,15 @@ void draw_sphere(double k,double ambient){
 	}
 }
 int main(){
-	double ang = 0;
+	double ang=0;
 	while(1){
 		printf("\033[H");
-		light[1] = cos(ang * 2);
-		light[2] = cos(ang);
-		light[0] = sin(ang);
+		light[1]=cos(ang * 2);
+		light[2]=cos(ang);
+		light[0]=sin(ang);
 		normalize(light);
-		ang += .05;
-		draw_sphere(2, .3);
+		ang+=.05;
+		draw_sphere(2,.3);
 		usleep(100000);
-	}return 0;
+	}return(0);
 }
