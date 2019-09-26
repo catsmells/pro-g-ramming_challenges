@@ -8,7 +8,7 @@ void normalize(double*v){
 	v[0]/=len;v[1]/=len;v[2]/=len;
 } 
 double dot(double *x,double *y){
-	double d = x[0]*y[0] + x[1]*y[1] + x[2]*y[2];
+	double d=x[0]*y[0]+x[1]*y[1]+x[2]*y[2];
 	return d < 0 ? -d : 0;
 }
 typedef struct{double cx,cy,cz,r;} sphere_t;
@@ -38,7 +38,7 @@ void draw_sphere(double k,double ambient){
 				hit_result=1;
 			else if(zs1>zb1)hit_result=1;
 			else if(zs2>zb2)hit_result=0;
-			else if (zs2>zb1) hit_result=2;
+			else if (zs2>zb1)hit_result=2;
 			else hit_result=1;
 			switch(hit_result){
 			case 0:
