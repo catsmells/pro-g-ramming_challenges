@@ -38,7 +38,7 @@ void draw_sphere(double k,double ambient){
 				hit_result=1;
 			else if(zs1>zb1)hit_result=1;
 			else if(zs2>zb2)hit_result=0;
-			else if (zs2 > zb1) hit_result=2;
+			else if (zs2>zb1) hit_result=2;
 			else hit_result=1;
 			switch(hit_result){
 			case 0:
