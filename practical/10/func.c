@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 int main(int argc,char* argv[]){
   system("clear");
-  int i=0,sum=0,n=0,avg=0;
-	FILE *lmao;
-	lmao=fopen("data.txt","r");
-	while(fscanf(lmao,"%d",&n)!=EOF){
-		sum+=n;
-		i++;
-		avg=(sum/i);
-	}
-	printf("averaging at %d minutes.\a\n");
-	fclose(lmao);
-	return(0);
+  FILE *zz;
+  char input[255];
+  char yy;
+  infile=fopen("list.txt","r");
+  if(infile==NULL){
+    printf("List file is either missing or corrupted.\n");
+}
+  else{
+        yy=fgets(input,sizeof(input),infile);
+        if(yy!=0){
+        printf("\aTodo: %s\n\n",input);
+    }
+  }
+  fclose(infile);
+  return(0);
 }
