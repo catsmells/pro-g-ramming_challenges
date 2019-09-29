@@ -1,0 +1,6 @@
+#NoEnv
+^`::
+loop{
+  Send .
+  Return
+}
