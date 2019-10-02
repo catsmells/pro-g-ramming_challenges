@@ -5,6 +5,7 @@
 #include <conio.h>
 #include <ctype.h>
 #include <dos.h>
+system("clear");
 int plq[8][8],zzr=0,prte=0,prtn=0;
 int nvwc();
 char strfilename[15];
@@ -23,39 +24,19 @@ void main(){
 	int gdriver=DETECT;
 	int gmode;
 	initgraph(&gdriver,&gmode," ");
-	for(float i=0;i<=6;i=i+0.1){
-		setcolor(12);
-		settextstyle(4,HORIZ_DIR,i);
-		outtextxy(50,120,"OSCRchess");
-		delay(30);
-		cleardevice();
-	}
-	outtextxy(50,120,"OSCRchess");
-	settextstyle(1,HORIZ_DIR,3);
+	printf('\e[1;34m%-6s\e[m'"\aOSCRchess\n\n");
 	getch();
-	cleardevice();
-	setcolor(CYAN);
-	outtextxy(50,220,"OSCRchess");
-	setcolor(6);
-	outtextxy(50,250,"castrated");
 	outtextxy(350,250,"L1F01BSCS0144");
 	getch();
-	cleardevice();
-	cleardevice();
-	settextstyle(1,HORIZ_DIR,2);
-	setcolor(12);
-	outtextxy(50,10,"Press the following: \n");
-	outtextxy(50,10,"______________________\n");
 	setcolor(6);
 	settextstyle(1,HORIZ_DIR,1.5);
-	outtextxy(50,60,"F2 to save file\n");
-	outtextxy(50,80,"F3 to load file\n");
-	outtextxy(50,100,"ESC to exit game\n");
-	outtextxy(50,120,"U to undo selection\n");
-	outtextxy(50,200,"\nPress any key to play ");
+	printf("\nF2 - Save\n");
+	printf("F3 - Load Game\n");
+	printf("U - Undo\n");
+	printf("ESC - Exit\n");
+	printf("\n\tPress any key to begin. \n");
 	getch();
-	cleardevice();
-	cleartext();
+	system("sleep 5");
 	initialize();
 	char ch;
 	int x=-1,y=-1,x1=-1,y1=-1;
