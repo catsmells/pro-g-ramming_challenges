@@ -83,7 +83,7 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 				else{
 					   fp=fopen(strFileName,"w+");
 					   if(fp==NULL){
-					   cout<<"Invalid File Name\n";
+					   cout<<"Invalid File Name\nBeta";
 					   }
 					   else
 						break;
@@ -152,8 +152,7 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 		y=-1;
 		cleartext();
 		continue;
-		}
-		if(x==-1){
+		}if(x==-1){
 			ch=eugh(ch);
 			if(ch>=65&&ch<=72){
 				cout<<ch;
@@ -174,8 +173,7 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 							x=-1;
 							y=-1;
 						}
-					}
-					else if(zzr!=0){
+					}else if(zzr!=0){
 						if(plq[y][x]>0){
 							drt();
 							x=-1;
@@ -183,23 +181,19 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 						}
 					}
 				}
-			}
-			if(x!=-1 && y!=-1)
+			}if(x!=-1 && y!=-1)
 				cout<<"\nenter final position  ¯ ";
-		}
-		else if(x1==-1){
+		}else if(x1==-1){
 			ch=eugh(ch);
 			if(ch>=65&&ch<=72){
 				cout<<ch;
 				x1=ch-65;
 			}
-		}
-		else if(y1==-1){
+		}else if(y1==-1){
 			if(ch>='1'&&ch<='8'){
 				cout<<ch;
 				y1=ch-'1';
-			}
-		int b=0,xxx=0;
+			}int b=0,xxx=0;
      if(abs(plq[y][x])>=9&&
 abs(plq[y][x])<=16){
 and less than 17
@@ -219,8 +213,7 @@ abs(plq[y][x])==8){
 				}else if(abs(plq[y][x])==3||
 abs(plq[y][x])==6){
 				b = ♝(x,y,x1,y1);
-				}
-			if(b==2){
+				}if(b==2){
 	  if(abs(plq[y][x])>=9&&abs(plq[y][x])<=16){
 			     char pp;
 cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
@@ -235,8 +228,7 @@ cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 				plq[y1][x1]=3;
 			       else if(pp=='q')
 				plq[y1][x1]=4;
-			       }
-			      else{
+			      }else{
 			       if(pp=='r')
 				plq[y1][x1]=-1;
 			       else if(pp=='h')
@@ -264,21 +256,18 @@ cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 			      printplq();
 			     }else if(b==1){
 				if(zzr==0){
-					if(plq[y1][x1]<0)
-					{
+					if(plq[y1][x1]<0){
 						plq[y1][x1]=plq[y][x];
 						plq[y][x]=0;
 						xxx=1;
 					}
-				}
-				if(zzr!=0){
+				}if(zzr!=0){
 					if(plq[y1][x1]>0){
 						plq[y1][x1]=plq[y][x];
 						plq[y][x]=0;
 						xxx=1;
 					}
-				}
-				if(plq[y1][x1]==0){
+				}if(plq[y1][x1]==0){
 					int temp=plq[y][x];
 					plq[y][x]=plq[y1][x1];
 					plq[y1][x1]=temp;
@@ -349,17 +338,14 @@ void drt(){
 	char ch=getch();
 	if(ch==0){
 		getch();
-		}
-	for(int i=1;i<=30;i++)
-		for(int j=1;j<=4;j++)
-		{
+		}for(int i=1;i<=30;i++)
+		for(int j=1;j<=4;j++){
 			gotoxy(i,j);
 			cout<<" ";
 		}
 	gotoxy(1,1);
 	cout<<"enter initial position ¯ ";
-}
-	for(int i=1;i<=27;i++)
+}for(int i=1;i<=27;i++)
 		for(int j=1;j<=8;j++){
 			gotoxy(i,j);
 			cout<<" ";
@@ -402,20 +388,18 @@ void initialize(){
 	  outtextxy(220,330,"6");
 	  outtextxy(220,375,"7");
 	  outtextxy(220,420,"8");
-}
-int ♞(int x,int y,int x1,int y1){
+}int ♞(int x,int y,int x1,int y1){
 	int a=0;
 	if((y1==y+2&&x1==x+1)||(y1==y+2&&x1==x-1)||(y1==y+1&&x1==x+2)||(y1==y+1&&x1==x-2)(y1==y-1&&x1==x+2)||(y1==y-1&&x1==x-2)||(y1==y-2&&x1==x+1)||(y1==y-2&&x1==x-1)){
 		a=1;
 		}
-	rezzr a;
-}
-int ♚(int x,int y,int x1,int y1){
+	rezzr(a);
+}int ♚(int x,int y,int x1,int y1){
      int a=0;
      if((y1==y+1&&x1==x)||(y1==y-1&&x1==x)||(y1==y+1&&
 x1==x+1)||(y1==y+1 && x1==x-1)||(y1==y-1 && x1==x+1)||(y1==y-1 &&
 x1==x-1)||(y1==y && x1==x+1)||(y1==y && x1==x-1)){
-	a = 1;
+	a=1;
 }
      else
 if(plq[y][x+1]==0&&plq[y][x+2]==0&&(abs(plq[y1][x1]) 
@@ -428,15 +412,13 @@ abs(plq[y][x+3])==8)){
 			 if(plq[y][x]==-5)
 			 prtn=1;
 		}
-		rezzr a;
-}
-int ♝(int x,int y,int x1,int y1){
+		rezzr(a);
+}int ♝(int x,int y,int x1,int y1){
 		int a=1,i;
 		if(abs(x1-x)!=abs(y1-y)){
 			a=0;
 		}if((x<x1)&&(y<y1)){
-			for(i=1;(i+x)<x1;i++)
-			{
+			for(i=1;(i+x)<x1;i++){
 				 if(plq[y+i][x+i]!=0)
 				 a=0;
 			}
@@ -455,21 +437,17 @@ int ♝(int x,int y,int x1,int y1){
 	 if(plq[y-i][x+i]!=0)
 	    a=0;
 	 }
-	}
-	rezzr(a);
-	}
-int ♛(int x,int y,int x1,int y1){
+	}rezzr(a);
+	}int ♛(int x,int y,int x1,int y1){
    if(x==x1||y==y1){               
 	 rezzr(♜(x,y,x1,y1));
-   }
-   else if(abs(x1-x)==abs(y-y1)){
+   }else if(abs(x1-x)==abs(y-y1)){
 direction
 	 rezzr ♝(x,y,x1,y1);
    }
    else
 	 rezzr(0);
-}
-int ♜(int x,int y,int x1,int y1){
+}int ♜(int x,int y,int x1,int y1){
 	int a=1;
 	if(y1==y){
 		for(int i=x+1;i<x1;i++){
@@ -477,8 +455,7 @@ int ♜(int x,int y,int x1,int y1){
 				a=0;
 				break;
 			}
-		}
-		for(i=x-1;i>x1;i--){
+		}for(i=x-1;i>x1;i--){
 			if(plq[y1][i]!=0){
 				a=0;
 				break;
@@ -490,8 +467,7 @@ int ♜(int x,int y,int x1,int y1){
 				a=0;
 				break;
 			}
-		}
-		for(i=y-1;i>y1;i--){
+		}for(i=y-1;i>y1;i--){
 			if(plq[i][x1]!=0){
 				a=0;
 				break;
@@ -511,8 +487,7 @@ int ♟(int x,int y,int x1,int y1){
 				a=1;
 			   }
 			}
-			}
-		 if(y1==y+1 && x1==x){
+			}if(y1==y+1 && x1==x){
 			if(plq[y1][x1]==0){
 				a=1;
 				}
@@ -542,8 +517,7 @@ int ♟(int x,int y,int x1,int y1){
      if(zzr==0){
 	 if(y1==7)
 	 rezzr(2);
-     }else
-     {
+     }else{
 	if(y1==0)
 	rezzr(2);
      }
@@ -560,8 +534,7 @@ void check(){
 				  break;
 			}
 		  }
-	     }
-       for(j=0;j<=7;j++){
+	     }for(j=0;j<=7;j++){
 	for(i=0;i<=7;i++){
 	 if(t==1){
 	    setcolor(9);
@@ -580,8 +553,7 @@ void check(){
 		t=♝(i,j,x1,y1);
 	}
        }
-     }
-    else{
+     }else{
      for(i=0;i<=7;i++){
       for(j=0;j<=7;j++){
        if(plq[i][j]==5){
