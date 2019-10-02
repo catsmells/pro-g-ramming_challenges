@@ -45,9 +45,9 @@ int frz(int w,int h,int x,int y,ppp **b){
 			printf(XR"%dH",h+2);
 			return(steps==w*h-1);
 		}
-		if(steps++)printf(XR"%d;%dH[]",y+1,1+2*x);
+		if(steps++)printf(XR"%d;%dH♞",y+1,1+2*x);
 		x=nx,y=ny;
-		printf(XR"%d;%dH"XR"31m[]"XR"m",y+1,1+2*x);
+		printf(XR"%d;%dH"XR"31m♞"XR"m",y+1,1+2*x);
 		fflush(stdout);
 		usleep(300000);
 	}
