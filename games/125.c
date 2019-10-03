@@ -60,13 +60,11 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 				fp=fopen(strFileName,"r+");
 				if(fp!=NULL){
 					cout<<"File already exists\n";
-				}
-				else{
+				}else{
 					   fp=fopen(strFileName,"w+");
 					   if(fp==NULL){
 					   cout<<"Invalid File Name\nBeta";
-					   }
-					   else
+					   }else
 						break;
 				}
 			  }
@@ -83,8 +81,7 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 					x1=-1;
 					y1=-1;
 					continue;
-				}
-			if(ch=='='){
+				}if(ch=='='){
 				for(;;){
 cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 \b\b\b\b\bEnter File name to Load \n";
@@ -122,11 +119,9 @@ cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 					}
 				  continue;
 				  }
-			}
-		if(ch==27){
+			}if(ch==27){
 			break;
-			}
-		else if(ch=='u'||ch=='U'){
+			}else if(ch=='u'||ch=='U'){
 		x=-1;
 		x1=-1;
 		y1=-1;
@@ -233,8 +228,7 @@ cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 			       plq[y][x]=0;
 			       xxx=1;
 				}
-				}
-			      printplq();
+				}printplq();
 			     }else if(b==1){
 				if(zzr==0){
 					if(plq[y1][x1]<0){
@@ -253,8 +247,7 @@ cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 					plq[y][x]=plq[y1][x1];
 					plq[y1][x1]=temp;
 					xxx=1;
-				}
-				printplq();
+				}printplq();
 			}
 			x=-1;
 			y=-1;
@@ -282,8 +275,7 @@ cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\
 				}
 			}
 		}
-}
-void printplq(){
+}void printplq(){
 	for(int i=0;i<8;i++){
 		for(int j=0;j<8;j++){
 			if((i+j)%2==0)
@@ -313,8 +305,7 @@ void printplq(){
 			  }
 			}
 		}
-	}
-void drt(){
+	}void drt(){
 	cout<<"\nTry Again, Retard.\n";
 	char ch=getch();
 	if(ch==0){
@@ -330,11 +321,9 @@ void drt(){
 		for(int j=1;j<=8;j++){
 			gotoxy(i,j);
 			cout<<" ";
-			}
-	gotoxy(1,1);
+			}gotoxy(1,1);
 	cout<<"enter initial position ¯ ";
-}
-void initialize(){
+}void initialize(){
 	  setcolor(WHITE);
 	  rectangle(250,90,610,450);
 	  for (int i=250;i<560;i+=90)
@@ -350,8 +339,7 @@ void initialize(){
 		 plq[1][j] = j+9;
 		 plq[7][j] = 0-(j+1);
 		 plq[6][j] = 0-(j+9);
-		 }
-	printplq();
+		 }printplq();
 	setcolor(YELLOW);
 	  outtextxy(265,55,"A");
 	  outtextxy(310,55,"B");
@@ -381,8 +369,7 @@ void initialize(){
 x1==x+1)||(y1==y+1 && x1==x-1)||(y1==y-1 && x1==x+1)||(y1==y-1 &&
 x1==x-1)||(y1==y && x1==x+1)||(y1==y && x1==x-1)){
 	a=1;
-}
-     else
+}else
 if(plq[y][x+1]==0&&plq[y][x+2]==0&&(abs(plq[y1][x1]) 
 ==abs(plq[y][x+3])==1||abs(plq[y1][x1])==
 abs(plq[y][x+3])==8)){
@@ -392,8 +379,7 @@ abs(plq[y][x+3])==8)){
 			 prte=1;
 			 if(plq[y][x]==-5)
 			 prtn=1;
-		}
-		rezzr(a);
+		}rezzr(a);
 }int ♝(int x,int y,int x1,int y1){
 		int a=1,i;
 		if(abs(x1-x)!=abs(y1-y)){
