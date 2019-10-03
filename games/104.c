@@ -61,7 +61,7 @@ int wtv(int w,int h){
 		erd(w,h,a,b);
 		if(frz(w,h,x,y,b+2)){
 			printf("Solved.\n");
-			return 1;
+			return(1);
 		}
 		if(++x>=w)x=0,y++;
 		if(y>=h){
