@@ -28,7 +28,7 @@ void erd(int w,int h,ppp **a,ppp **b){
 int frz(int w,int h,int x,int y,ppp **b){
 	int i,nx,ny,least;
 	int steps=0;
-	printf(XR"H"XR"J"XR"%d;%dH"XR"32m[]"XR"m",y+1,1+2*x);
+	printf(XR"H"XR"J"XR"%d;%dH"XR"32m♞"XR"m",y+1,1+2*x);
 	while(1){
 		b[y][x]=255;
 		for(i=0;i<8;i++)
