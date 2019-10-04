@@ -10,8 +10,7 @@ void qw(void *u,int lol,int lole){
 	yy{
 		xx printf(univ[y][x]?"\033[07m  \033[m":"  ");
 		printf("\033[E");
-	}
-	fflush(stdout);
+	}fflush(stdout);
 }void rpdx(void *u,int lol,int lole){
 	unsigned(*univ)[lol]=u;
 	unsigned new[lole][lol];
@@ -23,8 +22,7 @@ void qw(void *u,int lol,int lole){
 					n++;
 		if(univ[y][x])n--;
 		new[y][x]=(n==3||(n==2&&univ[y][x]));
-	}
-	yy xx univ[y][x]=new[y][x];
+	}yy xx univ[y][x]=new[y][x];
 }void vite(int lol, int lole){
 	unsigned univ[lole][lol];
 	zzz univ[y][x]=rand()<RAND_MAX/10?1:0;
