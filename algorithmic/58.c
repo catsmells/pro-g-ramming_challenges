@@ -12,8 +12,7 @@ void qw(void *u,int lol,int lole){
 		printf("\033[E");
 	}
 	fflush(stdout);
-}
-void rpdx(void *u,int lol,int lole){
+}void rpdx(void *u,int lol,int lole){
 	unsigned(*univ)[lol]=u;
 	unsigned new[lole][lol];
 	yy xx{
@@ -26,8 +25,7 @@ void rpdx(void *u,int lol,int lole){
 		new[y][x]=(n==3||(n==2&&univ[y][x]));
 	}
 	yy xx univ[y][x]=new[y][x];
-}
-void vite(int lol, int lole){
+}void vite(int lol, int lole){
 	unsigned univ[lole][lol];
 	zzz univ[y][x]=rand()<RAND_MAX/10?1:0;
 	while(1){
@@ -35,8 +33,7 @@ void vite(int lol, int lole){
 		rpdx(univ,lol,lole);
 		usleep(200000);
 	}
-}
-int main(int c,char **v){
+}int main(int c,char **v){
 	int lol=0,lole=0;
 	if(c>1)lol=atoi(v[1]);
 	if(c>2)lole=atoi(v[2]);
