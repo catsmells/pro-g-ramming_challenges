@@ -13,8 +13,7 @@ void erd(int w,int h,ppp **a,ppp **b){
 	for(i=1;i<q;i++){
 		a[i]=a[i-1]+p;
 		b[i]=a[i]+2;
-	}
-	memset(a[0],255,p*q);
+	}memset(a[0],255,p*q);
 	for(i=0;i<h;i++){
 		for(j=0;j<w;j++){
 			for(k=0;k<8;k++){
@@ -24,8 +23,7 @@ void erd(int w,int h,ppp **a,ppp **b){
 			}
 		}
 	}
-}
-int frz(int w,int h,int x,int y,ppp **b){
+}int frz(int w,int h,int x,int y,ppp **b){
 	int i,nx,ny,least;
 	int steps=0;
 	printf(XR"H"XR"J"XR"%d;%dH"XR"32m♞"XR"m",y+1,1+2*x);
@@ -40,19 +38,16 @@ int frz(int w,int h,int x,int y,ppp **b){
 				ny=y+pey[i];
 				least=b[ny][nx];
 			}
-		}
-		if(least>7){
+		}if(least>7){
 			printf(XR"%dH",h+2);
 			return(steps==w*h-1);
-		}
-		if(steps++)printf(XR"%d;%dH♞",y+1,1+2*x);
+		}if(steps++)printf(XR"%d;%dH♞",y+1,1+2*x);
 		x=nx,y=ny;
 		printf(XR"%d;%dH"XR"31m♞"XR"m",y+1,1+2*x);
 		fflush(stdout);
 		usleep(300000);
 	}
-}
-int wtv(int w,int h){
+}int wtv(int w,int h){
 	int x=0,y=0;
 	ppp **a,**b;
 	a=malloc((w+4)*(h+4)+sizeof(ppp*)*(h+4));
@@ -62,17 +57,14 @@ int wtv(int w,int h){
 		if(frz(w,h,x,y,b+2)){
 			printf("Solved.\n");
 			return(1);
-		}
-		if(++x>=w)x=0,y++;
+		}if(++x>=w)x=0,y++;
 		if(y>=h){
 			printf("Not even Blue can solve this one.\n");
 			return(0);
-		}
-		printf("Press a key, retard\n");
+		}printf("Press a key, retard\n");
 		getchar();
 	}
-}
-int main(int c,char **v){
+}int main(int c,char **v){
 	int w,h;
 	if(c<2||(w=atoi(v[1]))<=0)w=8;
 	if(c<3||(h=atoi(v[2]))<=0)h=w;
