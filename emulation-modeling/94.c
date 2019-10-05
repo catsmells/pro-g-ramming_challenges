@@ -6,12 +6,10 @@ double light[3]={-50,0,50};
 void normalize(double*v){
 	double len=sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
 	v[0]/=len;v[1]/=len;v[2]/=len;
-} 
-double dot(double *x,double *y){
+}double dot(double *x,double *y){
 	double d=x[0]*y[0]+x[1]*y[1]+x[2]*y[2];
-	return d < 0 ? -d : 0;
-}
-typedef struct{double cx,cy,cz,r;} sphere_t;
+	return(d<0?-d:0);
+}typedef struct{double cx,cy,cz,r;} sphere_t;
 sphere_t pos={20,20,0,20},neg={1,1,-6,20};
 int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 	double zsq;
@@ -23,8 +21,7 @@ int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 	*z1=sph->cz-zsq;
 	*z2=sph->cz+zsq;
 	return(1);
-}
-void draw_sphere(double k,double ambient){
+}void draw_sphere(double k,double ambient){
 	int i,j,intensity,hit_result;
 	double b;
 	double vec[3],x,y,zb1,zb2,zs1,zs2;
@@ -53,19 +50,16 @@ void draw_sphere(double k,double ambient){
 				vec[0]=neg.cx-x;
 				vec[1]=neg.cy-y;
 				vec[2]=neg.cz-zs2;
-			}
-			normalize(vec);
+			}normalize(vec);
 			b=pow(dot(light,vec),k)+ambient; //it was at this moment he realized: why didn't i do this in haskell?
 			intensity=(1-b)*(sizeof(shades)-1);
 			if(intensity<0)intensity=0;
 			if(intensity>=sizeof(shades)-1)
 				intensity=sizeof(shades)-2;
 			putchar(shades[intensity]);
-		}
-		putchar('\n');
+		}putchar('\n');
 	}
-}
-int main(){
+}int main(){
 	double ang=0;
 	while(1){
 		printf("\033[H");
