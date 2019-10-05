@@ -9,7 +9,7 @@ void normalize(double*v){
 }double dot(double *x,double *y){
 	double d=x[0]*y[0]+x[1]*y[1]+x[2]*y[2];
 	return(d<0?-d:0);
-}typedef struct{double cx,cy,cz,r;} sphere_t;
+}typedef struct{double cx,cy,cz,r;}sphere_t;
 sphere_t pos={20,20,0,20},neg={1,1,-6,20};
 int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 	double zsq;
@@ -63,7 +63,7 @@ int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 	double ang=0;
 	while(1){
 		printf("\033[H");
-		light[1]=cos(ang * 2);
+		light[1]=cos(ang*2);
 		light[2]=cos(ang);
 		light[0]=sin(ang);
 		normalize(light);
