@@ -57,12 +57,7 @@ void erd(int w,int h,ppp **a,ppp **b){
 		if(frz(w,h,x,y,b+2)){
 			printf("Solved.\n");
 			return(1);
-		}if(++x>=w)x=0,y++;
-		if(y>=h){
-			printf("Not even Blue can solve this one.\n");
-			return(0);
-		}printf("Press a key, retard\n");
-		getchar();
+		}
 	}
 }int main(int c,char **v){
 	int w,h;
