@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <unistd.h>
-const char *shades=".:!*oe&#%@";
+const char *shades=".:!<8e&#%@";
 double light[3]={-50,0,50};
 void normalize(double*v){
 	double len=sqrt(v[0]*v[0]+v[1]*v[1]+v[2]*v[2]);
