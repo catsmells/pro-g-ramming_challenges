@@ -55,13 +55,13 @@ struct pog *yypog(struct pog *xxv,char wfc[15],int d){
     hpg=xxv1;
     int i;
     double b,c,d,lkj=1.0;
-    double beep=(0),boop=(0);
+    double beep=(0),lgbtqai=(0);
     if(hpg==NULL&&rew==wng-1){
         for(i=1;i<eugh;i++){
             if(a[i][rew]==x)
                 beep++;
             else
-                boop++;
+                lgbtqai++;
         }
     }if(hpg==NULL&&rew!=wng-1){
         for(i=1;i<eugh;i++){
@@ -69,15 +69,15 @@ struct pog *yypog(struct pog *xxv,char wfc[15],int d){
                 if(a[i][wng-1]==x)    
                     beep=beep+1;
                 else
-                    boop=boop+1;
+                    lgbtqai=lgbtqai+1;
             }
         }
-    }b=beep/(beep+boop);
-    c=boop/(beep+boop);
-    if(beep==0.000000||boop==0.000000)
+    }b=beep/(beep+lgbtqai);
+    c=lgbtqai/(beep+lgbtqai);
+    if(beep==0.000000||lgbtqai==0.000000)
         d=0;
     else
-        d=((beep+boop)/(eugh-1)) *(-(b*(log(b)/log(2))+c*(log(c)/log(2))));
+        d=((beep+lgbtqai)/(eugh-1)) *(-(b*(log(b)/log(2))+c*(log(c)/log(2))));
     return(d);
 }void jyw(int a[500][500],int b[50][50],int eugh,int wng){
     int i,j,k,count=(1);
