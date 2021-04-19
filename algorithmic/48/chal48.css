@@ -1,0 +1,21 @@
+#damplegs {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+#canvas {
+  position: fixed;
+  left: 10;
+  top: 0;
+  width: 90%;
+  height: 90%;
+}
+
+audio {
+  position: fixed;
+  left: 25px;
+  bottom: 25px;
+  width: calc(100% - 20px);
+}
