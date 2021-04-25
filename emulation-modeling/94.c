@@ -51,7 +51,7 @@ int hit_sphere(sphere_t*sph,double x,double y,double *z1,double *z2){
 				vec[1]=neg.cy-y;
 				vec[2]=neg.cz-zs2;
 			}normalize(vec);
-			b=pow(dot(light,vec),k)+ambient; //it was at this moment he realized: why didn't i do this in haskell?
+			b=pow(dot(light,vec),k)+ambient;
 			intensity=(1-b)*(sizeof(shades)-1);
 			if(intensity<0)intensity=0;
 			if(intensity>=sizeof(shades)-1)
