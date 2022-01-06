@@ -1,3 +1,5 @@
+PortaLANG is a general-purpose, functional quantum language.
+
 Hello World:
 ===================================================================================
 ֎478IUYIG34635TB
