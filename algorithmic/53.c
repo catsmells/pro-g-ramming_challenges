@@ -16,5 +16,4 @@ int ey(int n){
    int n;
    printf("Number: ");
    scanf("%d",&n);
-   printf("Maximum Prime Possible: %d",ey(n));
-}
+   printf("Maximum Prime Possible: %d",ey(n));}
