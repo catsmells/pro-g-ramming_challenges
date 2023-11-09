@@ -9,9 +9,9 @@ N: 1000
 delta: 64
 wire: make block! N * 4
 tbuf: #{}
-loop W * H * 3 [append tbuf 0]
+loop Y * X * 3 [append tbuf 0]
 bin: copy #{}
-loop W * H * 3 [append bin 0]
+loop Y * X * 3 [append bin 0]
 init-wire: func [n] [
     collect [
         repeat i n [
